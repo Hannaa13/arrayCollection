@@ -29,7 +29,7 @@ public class Array {
     }
 
 
-    public boolean contains(int index) {
+    public boolean containsForIndex(int index) {
 
         for (int i = 0; i < array.length; i++) {
             if (index <= array.length) {
@@ -55,6 +55,15 @@ public class Array {
             }
         }
         return index;
+    }
+
+    public boolean contains(String string) {
+        for (int i = 0; i < array.length; i++) {
+            if (string.equals(array[i])) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
