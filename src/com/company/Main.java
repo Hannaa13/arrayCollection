@@ -8,7 +8,7 @@ public class Main {
 
         Array arr = new Array();
 
-        arr.setArray(new String[]{"f", "e", "d", "a", "w"});
+        arr.setArray(new String[]{"f", "e", null, "a", "w"});
         System.out.println(Arrays.toString(arr.getArray()));
         System.out.println(Arrays.toString(arr.add("newElement")));
         System.out.println(arr.get(2));

@@ -44,7 +44,15 @@ public class Array {
     }
 
     public int getSize() {
-        return array.length;
+        int i=0;
+        int size = 0;
+        while (i<array.length) {
+            if (array[i] != null) {
+                size = size +1;
+            }
+            i++;
+        }
+        return size;
     }
 
     public int find(String str) {
