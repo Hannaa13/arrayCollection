@@ -17,7 +17,7 @@ public class Main {
         System.out.println(arr.getSize());
         System.out.println(arr.find("a"));
         System.out.println(Arrays.toString(arr.delete("f")));
-        System.out.println(arr.contains("w"));
+        System.out.println(arr.contains("e"));
 
         Array arr2 = new Array();
         arr2.setArray(new String[]{"f", "e", "q", "a", "w"});
