@@ -1,27 +1,50 @@
 package com.company;
 
-import java.util.Arrays;
+import com.company.interfaces.impl.Collect;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Array arr = new Array();
+        Collect collect1 = new Collect();
+        Collect collect2 = new Collect();
+        long start = System.nanoTime();
 
-        arr.setArray(new String[]{"f", "e", null, "a", "w"});
-        System.out.println(Arrays.toString(arr.getArray()));
-        System.out.println(Arrays.toString(arr.add("newElement")));
-        System.out.println(arr.get(2));
-        System.out.println(arr.containsForIndex(8));
-        System.out.println(Arrays.toString(arr.clear()));
-        System.out.println(arr.getSize());
-        System.out.println(arr.find("a"));
-        System.out.println(Arrays.toString(arr.delete("f")));
-        System.out.println(arr.contains("e"));
 
-        Array arr2 = new Array();
-        arr2.setArray(new String[]{"f", "e", "q", "a", "w"});
-        System.out.println(arr2.equals(arr));
+        for (int i = 0; i < 100; i++) {
+            collect1.add("1");
+
+        }
+        System.out.println(System.nanoTime() - start);
+
+        for (int i = 0; i < 100; i++) {
+            collect2.addOld("2");
+        }
+        System.out.println(System.nanoTime() - start);
+
+
+        for (int i = 0; i < 1000; i++) {
+            collect1.add("1");
+        }
+        System.out.println(System.nanoTime() - start);
+
+        for (int i = 0; i < 1000; i++) {
+            collect2.addOld("2");
+        }
+        System.out.println(System.nanoTime() - start);
+
+        for (int i = 0; i < 1000000; i++) {
+            collect1.add("1");
+        }
+        System.out.println(System.nanoTime() - start);
+
+        for (int i = 0; i < 1000000; i++) {
+            collect2.addOld("2");
+        }
+        System.out.println(System.nanoTime() - start);
+
+
     }
-
 }
+
+
