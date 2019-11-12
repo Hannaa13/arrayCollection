@@ -38,10 +38,7 @@ public class Main {
         }
         System.out.println(System.nanoTime() - start);
 
-        for (int i = 0; i < 1000000; i++) {
-            collect2.addOld("2");
-        }
-        System.out.println(System.nanoTime() - start);
+
 
 
     }
